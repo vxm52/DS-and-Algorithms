@@ -51,5 +51,17 @@ public class LinkedList {                 //Basically going to wrap our head
             current = current.next;
         }
     }
+    
+    public void addInMiddle(int data) {
+        Node newNode = new Node(data);           //New node that we want to add somewhere in the middle of the list
+        Node current = head;                     //Start from the head
+        while (current.next != null) {           //Walk thorugh the list until there is no more nodes
+            if (current.next.data == data)       //If the next node's data matches the data we 
+            {
+                newNode.next = current.next;     //New node's next value will link to the upcoming node in the list
+                current.next = newNode;          //Current node will link to the newNode, effectively letting it "cut in line"
+            }
+        }
+    }
 }
 
