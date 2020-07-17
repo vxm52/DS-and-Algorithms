@@ -12,8 +12,8 @@ public class Shuffle {
         int N = a.length;
         for (int i = 0; i < N; i++)
         {
-//            int r = Shuffle.uniform(i + 1);
-//            exch(a, i, r);
+            int r = StdRandom.uniform(i + 1);
+            exch((Comparable[]) a, i, r);
         }
     }
     
