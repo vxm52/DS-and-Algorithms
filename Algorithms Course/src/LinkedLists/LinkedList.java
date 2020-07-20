@@ -13,13 +13,13 @@ public class LinkedList {                 //Basically going to wrap our head
     Node head;
     
     public void append(int data) {        //Takes in a data value
-        if  (head == null)                //If head is null, meaning that tere is nothing in the element yet...
+        if  (head == null)                //If head is null, meaning that there is nothing in the element yet...
         {                 
             head = new Node(data);        //Create the head
             return;
         }
         Node current = head;              //Pointer that starts at the current node (head of the linked list)
-        while (current.next != null) {    //Walk through the linked list until we get to the end of the list (as long as something is after the current node.
+        while (current.next != null) {    //Walk through the linked list until we get to the end of the list (as long as something is after the current node).
             current = current.next;
         }
         current.next = new Node(data);    //When we get to the end of the linked list, create this new node
@@ -55,8 +55,8 @@ public class LinkedList {                 //Basically going to wrap our head
     public void addInMiddle(int data) {
         Node newNode = new Node(data);           //New node that we want to add somewhere in the middle of the list
         Node current = head;                     //Start from the head
-        while (current.next != null) {           //Walk thorugh the list until there is no more nodes
-            if (current.next.data == data)       //If the next node's data matches the data we 
+        while (current.next != null) {           //Walk through the list until there are no more nodes
+            if (current.next.data == data)       //If the next node's data matches the data we want to add
             {
                 newNode.next = current.next;     //New node's next value will link to the upcoming node in the list
                 current.next = newNode;          //Current node will link to the newNode, effectively letting it "cut in line"
