@@ -20,7 +20,7 @@ public class WeightedQuickUnionUF //16 bytes (object overhead)
         while (i != id[i])
         {
             id[i] = id[id[i]];    //Add second loop to root() to set the idp[ of each examined node to the root.
-            i = id[i]; //Chase parent pointers until reach root. Untill i = id[i]
+            i = id[i];            //Chase parent pointers until reach root. Untill i = id[i]
         }
         return i;
     }
